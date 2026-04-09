@@ -119,7 +119,7 @@ pprint([(k, v["title"]) for k, v in data.items()][:10])
 :width: 80%
 ```
 
-## ¿Cómo dice?
+### ¿Cómo dice?
 
 ```
 uv run ruff check <path/to/file(s)>
@@ -143,13 +143,6 @@ uv no ejecuta codigo, lo analiza y transforma **estáticamente**
 - decenas más
 :::
 
-### Imagen de Ruff
-
-```{image} img/ruff.png
-:alt: Reglas de Ruff
-:width: 80%
-```
-
 ## ¿Aguantarse la pelusa? ¿cuánta?
 
 ```bash
@@ -163,7 +156,7 @@ $ uv run ruff format --check .
 1185 files would be reformatted, 468 files already formatted
 ```
 
-## Con las reglas que suelo usar
+### Con las reglas que suelo usar
 
 ```{image} img/rules_diff.png
 :alt: Diferencia de reglas
