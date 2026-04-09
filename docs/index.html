@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Tooling moderno en Python</title>
+    <link rel="stylesheet" type="text/css" href="_static/revealjs/dist/reveal.css?v=d4488b42" />
+    <link rel="stylesheet" href="_static/revealjs/dist/theme/white.css" type="text/css" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  </head><body>
+    <div class="reveal">
+        <div class="slides" role="main">
+            <section >
+<section >
+<h1>Tooling moderno en Python</h1>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/MaryRose-carpentry_tools1.jpg/250px-MaryRose-carpentry_tools1.jpg" /></p>
+<p>Martín Gaitán &#64; Fierro</p>
+<a class="reference internal image-reference" href="_images/fierro.png"><img alt="Fierro" src="_images/fierro.png" style="width: 220px;" />
+</a>
+</section>
+<section >
+<h1>Tooling moderno en Python</h1>
+
+</section>
+</section>
+<section >
+<section >
+<h2>DevEx (DX): <strong>Experiencia</strong> del desarrollo de software</h2>
+<blockquote>
+<div><p>«Herramientas y procesos para hacer el trabajo de quienes <strong>crean software</strong> más fácil y productivo»</p>
+</div></blockquote>
+</section>
+<section >
+<h2>DevEx (DX): <strong>Experiencia</strong> del desarrollo de software</h2>
+
+</section>
+<section >
+<h3>¿Y quienes crean software?</h3>
+<p>Tod&#64;s nosotres! Devs, PM, soporte, infra y <strong>agentes</strong>.</p>
+<p>Pd: <strike>Developer</strike> <strong>Development</strong> Experience</p>
+</section>
+<section >
+<h3>¿Y quienes crean software?</h3>
+
+</section>
+<section >
+<h3>Momento «yo»</h3>
+<a class="reference internal image-reference" href="_images/yo.png"><img alt="Momento yo" src="_images/yo.png" style="width: 420px;" />
+</a>
+<p>Tools + docs (+ agentes), FTW!</p>
+</section>
+<section >
+<h3>Momento «yo»</h3>
+
+</section>
+</section>
+<section >
+<section >
+<h2>El tooling de Python no era <strong>pythonico</strong></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">setup.py</span></code> misteriosos (<code class="docutils literal notranslate"><span class="pre">setuptools</span></code> y más viejos)</p></li>
+<li><p>Dependencias inseguras y lentas (<code class="docutils literal notranslate"><span class="pre">pip</span></code> y más viejos)</p></li>
+<li><p>Aislacion de entornos complejo (<code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>)</p></li>
+<li><p>Linting/formatters dispersos y lentos (<code class="docutils literal notranslate"><span class="pre">flake8</span></code>, + plugins)</p></li>
+<li><p>Test framework feísimo (<code class="docutils literal notranslate"><span class="pre">unittest</span></code>)</p></li>
+<li><p>Tipado estático complejo y lento (<code class="docutils literal notranslate"><span class="pre">mypy</span></code>)</p></li>
+</ul>
+<p>Un lenguaje expcecional como python merece mejores herramientas</p>
+</section>
+<section >
+<h2>El tooling de Python no era <strong>pythonico</strong></h2>
+
+</section>
+</section>
+<section >
+<section >
+<h2>Pero un día llegó el doctor…</h2>
+<p>…manejando un cuatrimotor (oxidado)</p>
+<a class="reference internal image-reference" href="_images/astral.png"><img alt="Astral" src="_images/astral.png" style="width: 50%;" />
+</a>
+<p>¿y saben lo que pasó?</p>
+</section>
+<section >
+<h2>Pero un día llegó el doctor…</h2>
+
+</section>
+</section>
+<section >
+<section >
+<h2>Pieza 1: uv</h2>
+<a class="reference internal image-reference" href="_images/uv.png"><img alt="uv" src="_images/uv.png" style="width: 80%;" />
+</a>
+</section>
+<section >
+<h2>Pieza 1: uv</h2>
+
+</section>
+<section >
+<h3>uv’s mini cheatsheet</h3>
+<pre data-id="uv-s-mini-cheatsheet"><code data-trim data-noescape class="text">uv add   # resuelve y agrega depedencias al proyecto
+uv run &lt;comando&gt;  # ejecuta un comando provisto en el proyecto (o dependencia)
+uv run script.py   # ejecuta el script
+uv run -p 3.13 ...   # version de Python especifica
+uv tool install &lt;tool&gt; # descarga y deja la tool disponible
+uv python install 3.15   # descarga e instala Python estático en cualquier OS
+uv build --wheel   # produce el &quot;.whl&quot; del paquete
+uv pip install ...  # &quot;pip compatible&quot; (buuuh!)
+</code></pre>
+</section>
+<section >
+<h3>uv’s mini cheatsheet</h3>
+
+</section>
+<section >
+<h3>uvx: shortcut para instalar en venv y ejecutar</h3>
+<p>Eg. <code class="docutils literal notranslate"><span class="pre">uvx</span> <span class="pre">textual-tetris</span></code></p>
+<a class="reference internal image-reference" href="_images/tetris.png"><img alt="Tetris" src="_images/tetris.png" style="width: 50%;" />
+</a>
+</section>
+<section >
+<h3>uvx: shortcut para instalar en venv y ejecutar</h3>
+
+</section>
+<section >
+<h3>Estándares modernos</h3>
+<ul class="simple">
+<li><p>Todo en <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> en vez de <code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">+</span> <span class="pre">setup.cfg</span> <span class="pre">+</span> <span class="pre">Manifest</span> <span class="pre">+</span> <span class="pre">...</span></code></p></li>
+</ul>
+</section>
+<section >
+<h3>Estándares modernos</h3>
+
+</section>
+</section>
+<section >
+<section >
+<h2>PEP723</h2>
+<p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span> <span class="pre">script.py</span></code></p>
+<pre data-id="pep723"><code data-trim data-noescape class="python"># /// script
+# requires-python = &quot;&gt;=3.12&quot;
+# dependencies = [
+#   &quot;requests&lt;3&quot;,
+#   &quot;rich&quot;,
+# ]
+# ///
+
+import requests
+from rich.pretty import pprint
+
+resp = requests.get(&quot;https://peps.python.org/api/peps.json&quot;)
+data = resp.json()
+pprint([(k, v[&quot;title&quot;]) for k, v in data.items()][:10])
+</code></pre>
+</section>
+<section >
+<h2>PEP723</h2>
+
+</section>
+</section>
+<section >
+<section >
+<h2>Locking de dependencias</h2>
+<p>Eg. <code class="docutils literal notranslate"><span class="pre">greenlet&gt;=3.0</span></code>.</p>
+<ul class="simple">
+<li><p>Sale 4.0 y 💣!</p></li>
+<li><p>«En mi compu funciona»</p></li>
+</ul>
+<p>Ahora <code class="docutils literal notranslate"><span class="pre">uv.lock</span></code> es la fuente de verdad.</p>
+</section>
+<section >
+<h2>Locking de dependencias</h2>
+
+</section>
+</section>
+<section >
+<section >
+<h2>Pieza 2: Ruff</h2>
+<a class="reference internal image-reference" href="_images/ruff.png"><img alt="Ruff" src="_images/ruff.png" style="width: 80%;" />
+</a>
+</section>
+<section >
+<h2>Pieza 2: Ruff</h2>
+
+</section>
+</section>
+<section >
+<section >
+<h2>¿Cómo dice?</h2>
+<p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span> <span class="pre">ruff</span> <span class="pre">check</span> <span class="pre">&lt;path/to/file(s)&gt;</span></code>
+<code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span> <span class="pre">ruff</span> <span class="pre">format</span> <span class="pre">&lt;path/to/file(s)&gt;</span></code></p>
+<p>uv no ejecuta codigo, lo analiza <strong>estáticamente</strong></p>
+</section>
+<section >
+<h2>¿Cómo dice?</h2>
+
+</section>
+</section>
+<section >
+<section >
+<h2>¿Reglas? ¡Somos Fierro y usamos facón!</h2>
+<ul class="simple">
+<li><p>Las clasicas de flake8 y pyflake</p></li>
+<li><p>Bandit (seguridad)</p></li>
+<li><p>Bugbear: patrones que ocultan bugs</p></li>
+<li><p>DTZ: errores en manejo de fechas</p></li>
+<li><p>Simplify: reescribir lo mismo más «pythonico»</p></li>
+<li><p>Isort/TDI: imports</p></li>
+<li><p>PERF: mejoras en performance</p></li>
+<li><p>UP/FURB: modernizar código</p></li>
+<li><p>Pep8-naming: la parte PEP8 que no respetamos 🥺</p></li>
+<li><p>decenas más</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/ruff.png"><img alt="Reglas de Ruff" src="_images/ruff.png" style="width: 80%;" />
+</a>
+</section>
+<section >
+<h2>¿Reglas? ¡Somos Fierro y usamos facón!</h2>
+
+</section>
+</section>
+<section >
+<section >
+<h2>¿Aguantarse la pelusa? ¿cuánta?</h2>
+<p>Hoy?</p>
+<pre data-id="aguantarse-la-pelusa-cuanta"><code data-trim data-noescape class="bash">$ uv run ruff check .
+....
+Found 6316 errors.
+[*] 2035 fixable with the `--fix` option (585 hidden fixes can be enabled with the `--unsafe-fixes` option).
+
+$ uv run ruff format --check .
+...
+1185 files would be reformatted, 468 files already formatted
+</code></pre>
+</section>
+<section >
+<h2>¿Aguantarse la pelusa? ¿cuánta?</h2>
+
+</section>
+</section>
+<section >
+<section >
+<h2>Con las reglas que suelo usar</h2>
+<a class="reference internal image-reference" href="_images/rules_diff.png"><img alt="Diferencia de reglas" src="_images/rules_diff.png" style="width: 50%;" />
+</a>
+<pre data-id="con-las-reglas-que-suelo-usar"><code data-trim data-noescape class="bash">Found 174027 errors.
+[*] 10636 fixable with the `--fix` option (31229 hidden fixes can be enabled with the `--unsafe-fixes` option).
+</code></pre>
+</section>
+<section >
+<h2>Con las reglas que suelo usar</h2>
+
+</section>
+</section>
+<section >
+<section >
+<h2>Autofixes</h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--fix</span></code>: 100% confiable. Pero hacer PRs adhoc para no meter ruido.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--fix</span> <span class="pre">--unsafe-fixes</span></code>: confiables, pero leer la doc de la regla por corner cases y revisar con calma.</p></li>
+<li><p>«ejecutá ruff en los archivos modificados del branch y corregí los errores»</p></li>
+<li><p>Tip: integrá ruff en tu editor (highlight de error + autofix en el save)</p></li>
+</ul>
+</section>
+<section >
+<h2>Autofixes</h2>
+
+</section>
+</section>
+<section >
+<section >
+<h2>Adopción incremental</h2>
+<a class="reference internal image-reference" href="_images/incremental.png"><img alt="Adopción incremental" src="_images/incremental.png" style="width: 80%;" />
+</a>
+</section>
+<section >
+<h2>Adopción incremental</h2>
+
+</section>
+</section>
+<section >
+<section >
+<h2>Preguntas</h2>
+</section>
+
+        </div>
+    </div>
+    
+    <script src="_static/revealjs/dist/reveal.js"></script>
+    
+    
+      
+    
+    <script>
+        var revealjsConfig = new Object();
+        Object.assign(revealjsConfig, {"hash": true, "slideNumber": true, "transition": "slide", "scrollActivationWidth": null});
+        
+        
+        
+          revealjsConfig.plugins = [
+            
+          ];
+        
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize(revealjsConfig);
+    </script>
+
+  </body>
+</html>

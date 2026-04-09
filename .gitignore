@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+.venv/
+
+# Tool caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Sphinx build state
+.doctrees/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
