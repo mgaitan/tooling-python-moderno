@@ -4,7 +4,7 @@
 :data-background-image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/MaryRose-carpentry_tools1.jpg/1280px-MaryRose-carpentry_tools1.jpg
 :data-background-size: cover
 :data-background-position: center
-:data-background-opacity: 0.18
+:data-background-opacity: 0.25
 :::
 
 Martín Gaitán @ <img src="_static/fierro.png" alt="Fierro" class="inline-brand" />
