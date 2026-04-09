@@ -38,7 +38,7 @@ Tools + docs (+ agentes), FTW!
 - Test framework feísimo (`unittest`)
 - Tipado estático complejo y lento (`mypy`)
 
-Un lenguaje excepcional merece herramientas excepcionales.
+💡 Un lenguaje excepcional merece herramientas excepcionales.
 :::
 
 ## Pero un día llegó el doctor...
@@ -176,11 +176,11 @@ Found 174027 errors.
 ```
 
 ## Autofixes
-
+ 
 - `--fix`: 100% confiable. Pero hacer PRs adhoc para no meter ruido.
 - `--fix --unsafe-fixes`: confiables, pero leer la doc de la regla por corner cases y revisar con calma.
-- Prompt: "ejecutá ruff check --fix en los archivos modificados del branch y corregí los errores que queden"
-- Tip: integrá ruff en tu editor (highlight de error + autofix en el save)
+- 🤖 "ejecutá ruff check --fix en los archivos modificados y corregí los errores que queden"
+- 📌 integrá ruff en tu editor (highlight de error + autofix en el save)
 
 ## Adopción incremental
 
