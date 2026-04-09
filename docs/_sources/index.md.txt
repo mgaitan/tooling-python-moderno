@@ -40,14 +40,10 @@ Un lenguaje expcecional como python merece mejores herramientas
 
 ...manejando un cuatrimotor (oxidado)
 
-:::{container} media-row
-```{image} img/astral.png
-:alt: Astral
-:width: 80%
-```
-
-¿y saben lo que pasó?
-:::
+<div class="media-row">
+  <img src="_static/astral.png" alt="Astral" />
+  <div class="aside-note">¿y saben lo que pasó?</div>
+</div>
 
 ## Pieza 1: uv
 
@@ -78,11 +74,11 @@ Eg. `uvx textual-tetris`
 :width: 50%
 ```
 
-### Estándares modernos
+## Estándares modernos
 
-- Todo en `pyproject.toml` en vez de `setup.py + setup.cfg + Manifest + ...`
+- Todo en `pyproject.toml` en vez de `setup.py + setup.cfg + Manifest + requirements.in|txt + ...`
 
-## PEP723
+### PEP723
 
 `uv run script.py`
 
@@ -105,12 +101,11 @@ pprint([(k, v["title"]) for k, v in data.items()][:10])
 
 ## Locking de dependencias
 
-Eg. `greenlet>=3.0`.
+- Eg. `greenlet>=3.0`. -> Sale 4.0 y 💣!
+- No más "En mi compu funciona"
 
-- Sale 4.0 y 💣!
-- "En mi compu funciona"
-
-Ahora `uv.lock` es la fuente de verdad.
+- Ahora `uv.lock` es la fuente de verdad.  
+- Lo versionamos en proyectos, no en libs. 
 
 ## Pieza 2: Ruff
 
@@ -124,9 +119,11 @@ Ahora `uv.lock` es la fuente de verdad.
 `uv run ruff check <path/to/file(s)>`
 `uv run ruff format <path/to/file(s)>`
 
-uv no ejecuta codigo, lo analiza **estáticamente**
+uv no ejecuta codigo, lo analiza y transforma **estáticamente**
 
-## ¿Reglas? ¡Somos Fierro y usamos facón!
+## ¿Reglas? 
+:::{container} compact
+**¡Somos Fierro y usamos facón!**
 
 - Las clasicas de flake8 y pyflake
 - Bandit (seguridad)
@@ -138,6 +135,9 @@ uv no ejecuta codigo, lo analiza **estáticamente**
 - UP/FURB: modernizar código
 - Pep8-naming: la parte PEP8 que no respetamos 🥺
 - decenas más
+:::
+
+### Imagen de Ruff
 
 ```{image} img/ruff.png
 :alt: Reglas de Ruff
@@ -145,8 +145,6 @@ uv no ejecuta codigo, lo analiza **estáticamente**
 ```
 
 ## ¿Aguantarse la pelusa? ¿cuánta?
-
-Hoy?
 
 ```bash
 $ uv run ruff check .

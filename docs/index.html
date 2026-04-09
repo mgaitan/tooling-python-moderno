@@ -62,10 +62,9 @@
 <section >
 <h2>Pero un día llegó el doctor…</h2>
 <p>…manejando un cuatrimotor (oxidado)</p>
-<div class="media-row docutils container">
-<a class="reference internal image-reference" href="_images/astral.png"><img alt="Astral" src="_images/astral.png" style="width: 80%;" />
-</a>
-<p>¿y saben lo que pasó?</p>
+<div class="media-row">
+  <img src="_static/astral.png" alt="Astral" />
+  <div class="aside-note">¿y saben lo que pasó?</div>
 </div>
 </section>
 </section>
@@ -93,16 +92,16 @@ uv pip install ...  # &quot;pip compatible&quot; (buuuh!)
 <a class="reference internal image-reference" href="_images/tetris.png"><img alt="Tetris" src="_images/tetris.png" style="width: 50%;" />
 </a>
 </section>
+</section>
 <section >
-<h3>Estándares modernos</h3>
+<section >
+<h2>Estándares modernos</h2>
 <ul class="simple">
-<li><p>Todo en <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> en vez de <code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">+</span> <span class="pre">setup.cfg</span> <span class="pre">+</span> <span class="pre">Manifest</span> <span class="pre">+</span> <span class="pre">...</span></code></p></li>
+<li><p>Todo en <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> en vez de <code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">+</span> <span class="pre">setup.cfg</span> <span class="pre">+</span> <span class="pre">Manifest</span> <span class="pre">+</span> <span class="pre">requirements.in|txt</span> <span class="pre">+</span> <span class="pre">...</span></code></p></li>
 </ul>
 </section>
-</section>
 <section >
-<section >
-<h2>PEP723</h2>
+<h3>PEP723</h3>
 <p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span> <span class="pre">script.py</span></code></p>
 <pre data-id="pep723"><code data-trim data-noescape class="python"># /// script
 # requires-python = &quot;&gt;=3.12&quot;
@@ -124,12 +123,12 @@ pprint([(k, v[&quot;title&quot;]) for k, v in data.items()][:10])
 <section >
 <section >
 <h2>Locking de dependencias</h2>
-<p>Eg. <code class="docutils literal notranslate"><span class="pre">greenlet&gt;=3.0</span></code>.</p>
 <ul class="simple">
-<li><p>Sale 4.0 y 💣!</p></li>
-<li><p>«En mi compu funciona»</p></li>
+<li><p>Eg. <code class="docutils literal notranslate"><span class="pre">greenlet&gt;=3.0</span></code>. -&gt; Sale 4.0 y 💣!</p></li>
+<li><p>No más «En mi compu funciona»</p></li>
+<li><p>Ahora <code class="docutils literal notranslate"><span class="pre">uv.lock</span></code> es la fuente de verdad.</p></li>
+<li><p>Lo versionamos en proyectos, no en libs.</p></li>
 </ul>
-<p>Ahora <code class="docutils literal notranslate"><span class="pre">uv.lock</span></code> es la fuente de verdad.</p>
 </section>
 </section>
 <section >
@@ -144,12 +143,14 @@ pprint([(k, v[&quot;title&quot;]) for k, v in data.items()][:10])
 <h2>¿Cómo dice?</h2>
 <p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span> <span class="pre">ruff</span> <span class="pre">check</span> <span class="pre">&lt;path/to/file(s)&gt;</span></code>
 <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span> <span class="pre">ruff</span> <span class="pre">format</span> <span class="pre">&lt;path/to/file(s)&gt;</span></code></p>
-<p>uv no ejecuta codigo, lo analiza <strong>estáticamente</strong></p>
+<p>uv no ejecuta codigo, lo analiza y transforma <strong>estáticamente</strong></p>
 </section>
 </section>
 <section >
 <section >
-<h2>¿Reglas? ¡Somos Fierro y usamos facón!</h2>
+<h2>¿Reglas?</h2>
+<div class="compact docutils container">
+<p><strong>¡Somos Fierro y usamos facón!</strong></p>
 <ul class="simple">
 <li><p>Las clasicas de flake8 y pyflake</p></li>
 <li><p>Bandit (seguridad)</p></li>
@@ -162,6 +163,10 @@ pprint([(k, v[&quot;title&quot;]) for k, v in data.items()][:10])
 <li><p>Pep8-naming: la parte PEP8 que no respetamos 🥺</p></li>
 <li><p>decenas más</p></li>
 </ul>
+</div>
+</section>
+<section >
+<h3>Imagen de Ruff</h3>
 <a class="reference internal image-reference" href="_images/ruff.png"><img alt="Reglas de Ruff" src="_images/ruff.png" style="width: 80%;" />
 </a>
 </section>
@@ -169,7 +174,6 @@ pprint([(k, v[&quot;title&quot;]) for k, v in data.items()][:10])
 <section >
 <section >
 <h2>¿Aguantarse la pelusa? ¿cuánta?</h2>
-<p>Hoy?</p>
 <pre data-id="aguantarse-la-pelusa-cuanta"><code data-trim data-noescape class="bash">$ uv run ruff check .
 ....
 Found 6316 errors.
