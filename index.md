@@ -1,6 +1,11 @@
 # Tooling moderno para Python
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/MaryRose-carpentry_tools1.jpg/250px-MaryRose-carpentry_tools1.jpg)
+:::{revealjs-section}
+:data-background-image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/MaryRose-carpentry_tools1.jpg/1280px-MaryRose-carpentry_tools1.jpg
+:data-background-size: cover
+:data-background-position: center
+:data-background-opacity: 0.18
+:::
 
 Martín Gaitán @ <img src="_static/fierro.png" alt="Fierro" class="inline-brand" />
 
@@ -33,12 +38,12 @@ Tools + docs (+ agentes), FTW!
 - Test framework feísimo (`unittest`)
 - Tipado estático complejo y lento (`mypy`)
 
-Un lenguaje expcecional como python merece mejores herramientas
+Un lenguaje expcecional como Python merece herramientas excepcionales
 :::
 
 ## Pero un día llegó el doctor...
 
-...manejando un cuatrimotor (oxidado)
+...manejando un cuatrimotor (oxidado 🦀)
 
 <div class="media-row">
   <img src="_static/astral.png" alt="Astral" />
