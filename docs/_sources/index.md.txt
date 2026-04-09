@@ -189,4 +189,10 @@ Found 174027 errors.
 :width: 80%
 ```
 
+## Más? 
+
+- `ty` -> extremely fast Python type checker and language server
+- pytest -> estándar _de facto_ para tests (framework/runner)
+- Mi template https://github.com/mgaitan/python-package-copier-template
+
 ## Preguntas
