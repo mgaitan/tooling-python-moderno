@@ -179,7 +179,7 @@ Found 174027 errors.
 
 - `--fix`: 100% confiable. Pero hacer PRs adhoc para no meter ruido.
 - `--fix --unsafe-fixes`: confiables, pero leer la doc de la regla por corner cases y revisar con calma.
-- "ejecutá ruff en los archivos modificados del branch y corregí los errores"
+- Prompt: "ejecutá ruff check --fix en los archivos modificados del branch y corregí los errores que queden"
 - Tip: integrá ruff en tu editor (highlight de error + autofix en el save)
 
 ## Adopción incremental
