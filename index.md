@@ -38,7 +38,7 @@ Tools + docs (+ agentes), FTW!
 - Test framework feísimo (`unittest`)
 - Tipado estático complejo y lento (`mypy`)
 
-Un lenguaje excepcional como Python merece herramientas excepcionales
+Un lenguaje excepcional merece herramientas excepcionales.
 :::
 
 ## Pero un día llegó el doctor...
