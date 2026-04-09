@@ -1,13 +1,8 @@
-# Tooling moderno en Python
+# Tooling moderno para Python
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/MaryRose-carpentry_tools1.jpg/250px-MaryRose-carpentry_tools1.jpg)
 
-Martín Gaitán @ Fierro
-
-```{image} img/fierro.png
-:alt: Fierro
-:width: 220px
-```
+Martín Gaitán @ <img src="_static/fierro.png" alt="Fierro" class="inline-brand" />
 
 ## DevEx (DX): **Experiencia** del desarrollo de software
 
@@ -23,13 +18,14 @@ Pd: <strike>Developer</strike> **Development** Experience
 
 ```{image} img/yo.png
 :alt: Momento yo
-:width: 420px
+:width: 800px
 ```
 
 Tools + docs (+ agentes), FTW!
 
 ## El tooling de Python no era **pythonico**
 
+:::{container} compact
 - `setup.py` misteriosos (`setuptools` y más viejos)
 - Dependencias inseguras y lentas (`pip` y más viejos)
 - Aislacion de entornos complejo (`virtualenv`)
@@ -38,23 +34,26 @@ Tools + docs (+ agentes), FTW!
 - Tipado estático complejo y lento (`mypy`)
 
 Un lenguaje expcecional como python merece mejores herramientas
+:::
 
 ## Pero un día llegó el doctor...
 
 ...manejando un cuatrimotor (oxidado)
 
+:::{container} media-row
 ```{image} img/astral.png
 :alt: Astral
-:width: 50%
+:width: 80%
 ```
 
 ¿y saben lo que pasó?
+:::
 
 ## Pieza 1: uv
 
 ```{image} img/uv.png
 :alt: uv
-:width: 80%
+:width: 800
 ```
 
 ### uv's mini cheatsheet

@@ -8,10 +8,11 @@ DOCTREE_DIR = .doctrees
 build:
 	rm -rf $(BUILD_DIR)
 	$(SPHINX) -b revealjs -d $(DOCTREE_DIR) $(SOURCE_DIR) $(BUILD_DIR)
+	cp slides_static/custom.css $(BUILD_DIR)/_static/custom.css
 	touch $(BUILD_DIR)/.nojekyll
 
 open: build
-	python3 -m webbrowser "file://$(abspath $(BUILD_DIR))/index.html"
+	uv run -m webbrowser "file://$(abspath $(BUILD_DIR))/index.html"
 
 deploy: build
 	git add README.md conf.py index.md img .gitignore Makefile $(BUILD_DIR)

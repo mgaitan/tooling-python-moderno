@@ -20,10 +20,11 @@ exclude_patterns = [
     "README.md",
 ]
 
-html_static_path = ["img"]
+html_static_path = ["img", "slides_static"]
 
 revealjs_style_theme = "white"
 revealjs_static_path = ["img"]
+revealjs_css_files = ["custom.css"]
 
 revealjs_script_conf = {
     "hash": True,
