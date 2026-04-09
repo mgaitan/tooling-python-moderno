@@ -23,10 +23,6 @@
 <a class="reference internal image-reference" href="_images/fierro.png"><img alt="Fierro" src="_images/fierro.png" style="width: 220px;" />
 </a>
 </section>
-<section >
-<h1>Tooling moderno en Python</h1>
-
-</section>
 </section>
 <section >
 <section >
@@ -36,27 +32,15 @@
 </div></blockquote>
 </section>
 <section >
-<h2>DevEx (DX): <strong>Experiencia</strong> del desarrollo de software</h2>
-
-</section>
-<section >
 <h3>¿Y quienes crean software?</h3>
 <p>Tod&#64;s nosotres! Devs, PM, soporte, infra y <strong>agentes</strong>.</p>
 <p>Pd: <strike>Developer</strike> <strong>Development</strong> Experience</p>
-</section>
-<section >
-<h3>¿Y quienes crean software?</h3>
-
 </section>
 <section >
 <h3>Momento «yo»</h3>
 <a class="reference internal image-reference" href="_images/yo.png"><img alt="Momento yo" src="_images/yo.png" style="width: 420px;" />
 </a>
 <p>Tools + docs (+ agentes), FTW!</p>
-</section>
-<section >
-<h3>Momento «yo»</h3>
-
 </section>
 </section>
 <section >
@@ -72,10 +56,6 @@
 </ul>
 <p>Un lenguaje expcecional como python merece mejores herramientas</p>
 </section>
-<section >
-<h2>El tooling de Python no era <strong>pythonico</strong></h2>
-
-</section>
 </section>
 <section >
 <section >
@@ -85,20 +65,12 @@
 </a>
 <p>¿y saben lo que pasó?</p>
 </section>
-<section >
-<h2>Pero un día llegó el doctor…</h2>
-
-</section>
 </section>
 <section >
 <section >
 <h2>Pieza 1: uv</h2>
 <a class="reference internal image-reference" href="_images/uv.png"><img alt="uv" src="_images/uv.png" style="width: 80%;" />
 </a>
-</section>
-<section >
-<h2>Pieza 1: uv</h2>
-
 </section>
 <section >
 <h3>uv’s mini cheatsheet</h3>
@@ -113,28 +85,16 @@ uv pip install ...  # &quot;pip compatible&quot; (buuuh!)
 </code></pre>
 </section>
 <section >
-<h3>uv’s mini cheatsheet</h3>
-
-</section>
-<section >
 <h3>uvx: shortcut para instalar en venv y ejecutar</h3>
 <p>Eg. <code class="docutils literal notranslate"><span class="pre">uvx</span> <span class="pre">textual-tetris</span></code></p>
 <a class="reference internal image-reference" href="_images/tetris.png"><img alt="Tetris" src="_images/tetris.png" style="width: 50%;" />
 </a>
 </section>
 <section >
-<h3>uvx: shortcut para instalar en venv y ejecutar</h3>
-
-</section>
-<section >
 <h3>Estándares modernos</h3>
 <ul class="simple">
 <li><p>Todo en <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> en vez de <code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">+</span> <span class="pre">setup.cfg</span> <span class="pre">+</span> <span class="pre">Manifest</span> <span class="pre">+</span> <span class="pre">...</span></code></p></li>
 </ul>
-</section>
-<section >
-<h3>Estándares modernos</h3>
-
 </section>
 </section>
 <section >
@@ -157,10 +117,6 @@ data = resp.json()
 pprint([(k, v[&quot;title&quot;]) for k, v in data.items()][:10])
 </code></pre>
 </section>
-<section >
-<h2>PEP723</h2>
-
-</section>
 </section>
 <section >
 <section >
@@ -172,20 +128,12 @@ pprint([(k, v[&quot;title&quot;]) for k, v in data.items()][:10])
 </ul>
 <p>Ahora <code class="docutils literal notranslate"><span class="pre">uv.lock</span></code> es la fuente de verdad.</p>
 </section>
-<section >
-<h2>Locking de dependencias</h2>
-
-</section>
 </section>
 <section >
 <section >
 <h2>Pieza 2: Ruff</h2>
 <a class="reference internal image-reference" href="_images/ruff.png"><img alt="Ruff" src="_images/ruff.png" style="width: 80%;" />
 </a>
-</section>
-<section >
-<h2>Pieza 2: Ruff</h2>
-
 </section>
 </section>
 <section >
@@ -194,10 +142,6 @@ pprint([(k, v[&quot;title&quot;]) for k, v in data.items()][:10])
 <p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span> <span class="pre">ruff</span> <span class="pre">check</span> <span class="pre">&lt;path/to/file(s)&gt;</span></code>
 <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span> <span class="pre">ruff</span> <span class="pre">format</span> <span class="pre">&lt;path/to/file(s)&gt;</span></code></p>
 <p>uv no ejecuta codigo, lo analiza <strong>estáticamente</strong></p>
-</section>
-<section >
-<h2>¿Cómo dice?</h2>
-
 </section>
 </section>
 <section >
@@ -218,10 +162,6 @@ pprint([(k, v[&quot;title&quot;]) for k, v in data.items()][:10])
 <a class="reference internal image-reference" href="_images/ruff.png"><img alt="Reglas de Ruff" src="_images/ruff.png" style="width: 80%;" />
 </a>
 </section>
-<section >
-<h2>¿Reglas? ¡Somos Fierro y usamos facón!</h2>
-
-</section>
 </section>
 <section >
 <section >
@@ -237,10 +177,6 @@ $ uv run ruff format --check .
 1185 files would be reformatted, 468 files already formatted
 </code></pre>
 </section>
-<section >
-<h2>¿Aguantarse la pelusa? ¿cuánta?</h2>
-
-</section>
 </section>
 <section >
 <section >
@@ -250,10 +186,6 @@ $ uv run ruff format --check .
 <pre data-id="con-las-reglas-que-suelo-usar"><code data-trim data-noescape class="bash">Found 174027 errors.
 [*] 10636 fixable with the `--fix` option (31229 hidden fixes can be enabled with the `--unsafe-fixes` option).
 </code></pre>
-</section>
-<section >
-<h2>Con las reglas que suelo usar</h2>
-
 </section>
 </section>
 <section >
@@ -266,20 +198,12 @@ $ uv run ruff format --check .
 <li><p>Tip: integrá ruff en tu editor (highlight de error + autofix en el save)</p></li>
 </ul>
 </section>
-<section >
-<h2>Autofixes</h2>
-
-</section>
 </section>
 <section >
 <section >
 <h2>Adopción incremental</h2>
 <a class="reference internal image-reference" href="_images/incremental.png"><img alt="Adopción incremental" src="_images/incremental.png" style="width: 80%;" />
 </a>
-</section>
-<section >
-<h2>Adopción incremental</h2>
-
 </section>
 </section>
 <section >

@@ -9,24 +9,15 @@ Martín Gaitán @ Fierro
 :width: 220px
 ```
 
-:::{revealjs-break}
-:::
-
 ## DevEx (DX): **Experiencia** del desarrollo de software
 
 > "Herramientas y procesos para hacer el trabajo de quienes **crean software** más fácil y productivo"
-
-:::{revealjs-break}
-:::
 
 ### ¿Y quienes crean software?
 
 Tod@s nosotres! Devs, PM, soporte, infra y **agentes**.
 
 Pd: <strike>Developer</strike> **Development** Experience
-
-:::{revealjs-break}
-:::
 
 ### Momento "yo"
 
@@ -36,9 +27,6 @@ Pd: <strike>Developer</strike> **Development** Experience
 ```
 
 Tools + docs (+ agentes), FTW!
-
-:::{revealjs-break}
-:::
 
 ## El tooling de Python no era **pythonico**
 
@@ -51,9 +39,6 @@ Tools + docs (+ agentes), FTW!
 
 Un lenguaje expcecional como python merece mejores herramientas
 
-:::{revealjs-break}
-:::
-
 ## Pero un día llegó el doctor...
 
 ...manejando un cuatrimotor (oxidado)
@@ -65,18 +50,12 @@ Un lenguaje expcecional como python merece mejores herramientas
 
 ¿y saben lo que pasó?
 
-:::{revealjs-break}
-:::
-
 ## Pieza 1: uv
 
 ```{image} img/uv.png
 :alt: uv
 :width: 80%
 ```
-
-:::{revealjs-break}
-:::
 
 ### uv's mini cheatsheet
 
@@ -91,9 +70,6 @@ uv build --wheel   # produce el ".whl" del paquete
 uv pip install ...  # "pip compatible" (buuuh!)
 ```
 
-:::{revealjs-break}
-:::
-
 ### uvx: shortcut para instalar en venv y ejecutar
 
 Eg. `uvx textual-tetris`
@@ -103,15 +79,9 @@ Eg. `uvx textual-tetris`
 :width: 50%
 ```
 
-:::{revealjs-break}
-:::
-
 ### Estándares modernos
 
 - Todo en `pyproject.toml` en vez de `setup.py + setup.cfg + Manifest + ...`
-
-:::{revealjs-break}
-:::
 
 ## PEP723
 
@@ -134,9 +104,6 @@ data = resp.json()
 pprint([(k, v["title"]) for k, v in data.items()][:10])
 ```
 
-:::{revealjs-break}
-:::
-
 ## Locking de dependencias
 
 Eg. `greenlet>=3.0`.
@@ -146,9 +113,6 @@ Eg. `greenlet>=3.0`.
 
 Ahora `uv.lock` es la fuente de verdad.
 
-:::{revealjs-break}
-:::
-
 ## Pieza 2: Ruff
 
 ```{image} img/ruff.png
@@ -156,18 +120,12 @@ Ahora `uv.lock` es la fuente de verdad.
 :width: 80%
 ```
 
-:::{revealjs-break}
-:::
-
 ## ¿Cómo dice?
 
 `uv run ruff check <path/to/file(s)>`
 `uv run ruff format <path/to/file(s)>`
 
 uv no ejecuta codigo, lo analiza **estáticamente**
-
-:::{revealjs-break}
-:::
 
 ## ¿Reglas? ¡Somos Fierro y usamos facón!
 
@@ -187,9 +145,6 @@ uv no ejecuta codigo, lo analiza **estáticamente**
 :width: 80%
 ```
 
-:::{revealjs-break}
-:::
-
 ## ¿Aguantarse la pelusa? ¿cuánta?
 
 Hoy?
@@ -205,9 +160,6 @@ $ uv run ruff format --check .
 1185 files would be reformatted, 468 files already formatted
 ```
 
-:::{revealjs-break}
-:::
-
 ## Con las reglas que suelo usar
 
 ```{image} img/rules_diff.png
@@ -220,9 +172,6 @@ Found 174027 errors.
 [*] 10636 fixable with the `--fix` option (31229 hidden fixes can be enabled with the `--unsafe-fixes` option).
 ```
 
-:::{revealjs-break}
-:::
-
 ## Autofixes
 
 - `--fix`: 100% confiable. Pero hacer PRs adhoc para no meter ruido.
@@ -230,17 +179,11 @@ Found 174027 errors.
 - "ejecutá ruff en los archivos modificados del branch y corregí los errores"
 - Tip: integrá ruff en tu editor (highlight de error + autofix en el save)
 
-:::{revealjs-break}
-:::
-
 ## Adopción incremental
 
 ```{image} img/incremental.png
 :alt: Adopción incremental
 :width: 80%
 ```
-
-:::{revealjs-break}
-:::
 
 ## Preguntas
