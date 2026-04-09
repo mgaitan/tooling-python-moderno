@@ -34,11 +34,11 @@ Tools + docs (+ agentes), FTW!
 - `setup.py` misteriosos (`setuptools` y más viejos)
 - Dependencias inseguras y lentas (`pip` y más viejos)
 - Aislacion de entornos complejo (`virtualenv`)
-- Linting/formatters dispersos y lentos (`flake8`, + plugins)
+- Linting/formatters dispersos y lentos (`black`, `flake8`+ plugins)
 - Test framework feísimo (`unittest`)
 - Tipado estático complejo y lento (`mypy`)
 
-Un lenguaje expcecional como Python merece herramientas excepcionales
+Un lenguaje excepcional como Python merece herramientas excepcionales
 :::
 
 ## Pero un día llegó el doctor...
