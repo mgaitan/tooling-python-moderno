@@ -1,4 +1,4 @@
-# Tooling moderno para Python
+# 🛠️ Tooling moderno para Python 🐍
 
 :::{revealjs-section}
 :data-background-image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/MaryRose-carpentry_tools1.jpg/1280px-MaryRose-carpentry_tools1.jpg
@@ -28,7 +28,7 @@ Pd: <strike>Developer</strike> **Development** Experience
 
 Tools + docs (+ agentes), FTW!
 
-## El tooling de Python no era **pythonico**
+## El tooling de Python no _era_ **pythonico**
 
 :::{container} compact
 - `setup.py` misteriosos (`setuptools` y más viejos)
@@ -81,7 +81,7 @@ Eg. `uvx textual-tetris`
 
 ## Estándares modernos
 
-- Todo en `pyproject.toml` en vez de `setup.py + setup.cfg + Manifest + requirements.in|txt + ...`
+- Todo en `pyproject.toml` en vez de `setup.py + setup.cfg + Manifest.in + requirements.in|txt + flake8.ini + pytest.ini + ...`
 
 ### PEP723
 
