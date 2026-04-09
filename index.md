@@ -121,8 +121,10 @@ pprint([(k, v["title"]) for k, v in data.items()][:10])
 
 ## ¿Cómo dice?
 
-`uv run ruff check <path/to/file(s)>`
-`uv run ruff format <path/to/file(s)>`
+```
+uv run ruff check <path/to/file(s)>
+uv run ruff format <path/to/file(s)>
+```
 
 uv no ejecuta codigo, lo analiza y transforma **estáticamente**
 
