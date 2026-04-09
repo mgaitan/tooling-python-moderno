@@ -167,7 +167,7 @@ $ uv run ruff format --check .
 
 ```{image} img/rules_diff.png
 :alt: Diferencia de reglas
-:width: 50%
+:width: 70%
 ```
 
 ```bash
