@@ -129,17 +129,16 @@ uv run ruff format <path/to/file(s)>
 uv no ejecuta codigo, lo analiza y transforma **estáticamente**
 
 ## ¿Reglas? 
-:::{container} compact
-**¡Somos Fierro y usamos facón!**
+**¡Somos Fierro y manda el facón!**
 
+:::{container} compact
 - Las clasicas de flake8 y pyflake
-- Bandit (seguridad)
-- Bugbear: patrones que ocultan bugs
+- Bandit/Bugbear: patrones con bugs/issue de seguridad
 - DTZ: errores en manejo de fechas
 - Simplify: reescribir lo mismo más "pythonico"
 - Isort/TDI: imports
 - PERF: mejoras en performance
-- UP/FURB: modernizar código
+- UP/FURB: modernizar código a idioms nuevos
 - Pep8-naming: la parte PEP8 que no respetamos 🥺
 - decenas más
 :::
